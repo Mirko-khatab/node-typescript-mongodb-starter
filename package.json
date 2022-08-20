@@ -1,0 +1,27 @@
+{
+  "name": "mongo-typescript-starter",
+  "version": "1.0.0",
+  "description": "templete to starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebazomar121/node-typescript-mongodb-starter.git"
+  },
+  "author": "rebazomar121",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebazomar121/node-typescript-mongodb-starter/issues"
+  },
+  "homepage": "https://github.com/rebazomar121/node-typescript-mongodb-starter#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  }
+}
