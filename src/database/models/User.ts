@@ -45,5 +45,5 @@ userSchema.methods.toJSON = function () {
   delete userObject.secret
   return userObject
 }
-const User = mongoose.model<UserType>("User", userSchema)
+const User = mongoose.model<UserType>("user", userSchema)
 export default User

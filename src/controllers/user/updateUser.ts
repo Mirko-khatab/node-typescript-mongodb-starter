@@ -1,15 +1,15 @@
 // import models
 import User from "../../database/models/User"
-// createUser
-const createUser = async (req: any, res: any) => {
+// updateUser
+const updateUser = async (req: any, res: any) => {
   try {
     // get user data
     const userData = req.body
-    // create user
-    const user = await User.create(userData)
+    // update user
+    const user = await User.findByIdAndUpdate(userData.id, userData)
     // send response
-    res.status(201).json({
-      message: "User created successfully",
+    res.status(200).json({
+      message: "User updated successfully",
       user,
     })
   } catch (error) {
@@ -19,4 +19,4 @@ const createUser = async (req: any, res: any) => {
     })
   }
 }
-export default createUser
+export default updateUser
