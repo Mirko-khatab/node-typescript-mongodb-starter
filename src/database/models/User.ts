@@ -24,8 +24,6 @@ const userSchema = new mongoose.Schema<UserType>(
     timestamps: true,
   }
 )
-const User = mongoose.model<UserType>("User", userSchema)
-export default User
 // comparePassword
 userSchema.methods.comparePassword = async function (password: string) {
   const result = await bcrypt.compare(password, this.password)
@@ -38,3 +36,14 @@ userSchema.pre("save", async function (next) {
   user.password = await bcrypt.hash(user.password, salt)
   next()
 })
+// not return this data's
+userSchema.methods.toJSON = function () {
+  const user = this
+  const userObject = user.toObject()
+  delete userObject.password
+  delete userObject.token
+  delete userObject.secret
+  return userObject
+}
+const User = mongoose.model<UserType>("User", userSchema)
+export default User

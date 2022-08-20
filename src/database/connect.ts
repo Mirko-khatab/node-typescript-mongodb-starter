@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-export const connect = async (DATABASE_URL, res) => {
+export const connect = async (DATABASE_URL) => {
   try {
     // check is provided database name
     if (!DATABASE_URL) throw Error("No mongo uri was provided.")
@@ -10,9 +10,6 @@ export const connect = async (DATABASE_URL, res) => {
   } catch (error) {
     // if we have error so return in error
     if (error instanceof Error) console.log(error.message.red)
-    res.status(500).json({
-      message: "Something went wrong",
-    })
   }
 }
 export default connect

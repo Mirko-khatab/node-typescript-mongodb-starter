@@ -4,6 +4,8 @@ import express from "express"
 import "colors"
 // use dotenv to get the environment variables.
 require("dotenv").config()
+// import database
+import connect from "./database/connect"
 // make app
 const app = express()
 // port
@@ -26,10 +28,13 @@ app.use(
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
+// connect to database
+connect("database-name")
 // cors
 app.use(cors())
 // routers
 app.use("/api", require("./routes"))
+
 // for listening
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`)
