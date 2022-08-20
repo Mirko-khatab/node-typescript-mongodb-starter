@@ -34,7 +34,6 @@ connect("database-name")
 app.use(cors())
 // routers
 app.use("/api", require("./routes"))
-
 // for listening
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`)
