@@ -16,8 +16,8 @@ Before you can run this project, ensure you have the following dependencies inst
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone --depth=1 https://github.com/rebazomar121/node-typescript-mongodb-starter your-project-name
+cd your-project-name
 ```
 
 ## Install project dependencies:
@@ -73,5 +73,6 @@ docker-compose up -d
 ```
 
 ## Contact
+
 you can contact me at <a href="mailto:info@rebaz.dev">email<a> or <a href="https://rebaz.dev">rebaz.dev</a>
 let me know if you have any questions or suggestions.
