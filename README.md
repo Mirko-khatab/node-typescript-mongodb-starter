@@ -73,5 +73,5 @@ docker-compose up -d
 ```
 
 ## Contact
-you can contact me at <a href="mailto:info@rebaz.dev"> or <a href="https://rebaz.dev">rebaz.dev</a>
+you can contact me at <a href="mailto:info@rebaz.dev">email<a> or <a href="https://rebaz.dev">rebaz.dev</a>
 let me know if you have any questions or suggestions.
