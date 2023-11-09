@@ -7,6 +7,10 @@ import router from "../api"
 import { CONFIG_CONST } from "./config.const"
 import connectMongoDb from "../database/mongodb/connectMongoDb"
 
+
+/**
+ * Configure and start the Express application.
+ */
 const config = () => {
   const app: Application = express()
   connectMongoDb()

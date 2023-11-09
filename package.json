@@ -1,6 +1,6 @@
 {
   "name": "mongo-typescript-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "templete to starter",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/rebazomar121/node-typescript-mongodb-starter#readme",
   "dependencies": {
+    "axios": "^1.6.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "color": "^4.2.3",

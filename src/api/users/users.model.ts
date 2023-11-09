@@ -21,6 +21,31 @@ const Schema = new mongoose.Schema<User>(
       type: String,
       required: false,
     },
+    otp: {
+      code: {
+        type: String,
+        required: false,
+      },
+      expireAt: {
+        type: Date,
+        required: false,
+      },
+    },
+    phone: {
+      number: {
+        type: String,
+        required: false,
+        unique: true,
+      },
+      isVerified: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    resetPasswordToken: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: true,
